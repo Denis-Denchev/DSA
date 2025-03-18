@@ -1,20 +1,24 @@
 # Data Structures and Algorithms (DSA) with Python
 
-Welcome to my DSA repository! This repository contains implementations of various data structures and algorithms in Python.
-Here, I will submit and document solutions for different DSA tasks and problems, showcasing both basic and advanced concepts.
+Welcome to my DSA repository! This repository contains implementations of various data structures and algorithms in Python. Here, I will submit and document solutions for different DSA tasks and problems, showcasing both basic and advanced concepts.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Structure of the Repository](#structure-of-the-repository)
-- [Binary search tree](#binary-search-tree)
+- [Recursive Factorial](#recursive-factorial)
+- [Recursive Fibonacci](#recursive-fibonacci)
+- [Recursive Reverse List](#recursive-reverse-list)
+- [Recursive Sum of Numbers](#recursive-sum-of-numbers)
 - [How to Run the Code](#how-to-run-the-code)
-
+- [License](#license)
 
 ## Introduction
 
-This repository is aimed at practicing and implementing various data structures and algorithms using Python. The goal is to provide a comprehensive understanding of the core principles of computer science, such as searching, sorting, tree structures, graph traversal, dynamic programming, etc., with hands-on code examples.
+This repository is aimed at practicing and implementing various data structures and algorithms using Python. The goal is to provide a comprehensive understanding of core principles in computer science, such as recursion, searching, sorting, and basic data structures. In this repository, I focus primarily on recursive solutions to common problems.
+
+The implementation examples in this repository cover tasks like calculating factorials, generating Fibonacci numbers, reversing lists, and summing numbers. Each section provides a clear, recursive solution to the task at hand.
 
 ## Technologies
 
@@ -25,37 +29,44 @@ This repository is aimed at practicing and implementing various data structures 
 
 The repository is organized as follows:
 
-##Binary search tree
+- **Recursive Factorial**: A recursive approach to calculating the factorial of a number.
+- **Recursive Fibonacci**: A recursive implementation of the Fibonacci sequence.
+- **Recursive Reverse List**: A recursive solution to reverse a list.
+- **Recursive Sum of Numbers**: A recursive function that computes the sum of a list of numbers.
 
-Binary Search Tree (BST) Implementation
-In this file, I have implemented a Binary Search Tree (BST), which is a fundamental data structure for efficiently storing and searching data. The tree supports the insertion of values and provides various traversal methods for exploring the tree in different ways. Below are the key features and explanations of the code:
+### Recursive Factorial
 
-1. TreeNode Class
-The TreeNode class defines the structure of a node in the binary tree. Each node contains:
+This section demonstrates the calculation of the **factorial** of a number using recursion. The factorial of a number `n` is defined as the product of all positive integers less than or equal to `n`.
 
-value: The value stored in the node.
-left and right: Pointers to the left and right child nodes.
-data: Optional additional data associated with the node.
-2. Insert Method
-The insert method is used to add values into the tree. It follows the BST property where:
+- **Base Case**: If `n` is less than or equal to 1, the result is 1.
+- **Recursive Case**: The function calls itself, multiplying `n` by the factorial of `n-1`.
 
-Values less than the node value are inserted into the left subtree.
-Values greater than the node value are inserted into the right subtree.
-This method ensures that the tree remains sorted as values are added.
+### Recursive Fibonacci
 
-3. Traversal Methods
-The tree supports three types of tree traversal methods:
+The **Fibonacci sequence** is a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1. This section demonstrates a recursive implementation of the Fibonacci sequence.
 
-Inorder Traversal (inorder_traversal):
+- **Base Case**: If `n` is 0 or 1, the result is `n`.
+- **Recursive Case**: The function calls itself for `n-1` and `n-2`, and returns their sum.
 
-This method visits nodes in ascending order, making it ideal for displaying the sorted sequence of values stored in the tree.
-The method first visits the left child, then the node itself, and finally the right child. This results in an ordered output.
-Example output: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15.
-Post-order Traversal (post_order):
+### Recursive Reverse List
 
-This method visits the left child, then the right child, and finally the node itself. It is often used for operations like deletion or tree cleanup since it ensures the children are processed before the node.
-Pre-order Traversal (preorder_traversal):
+This function reverses a list using recursion. The list is broken down recursively, and elements are reassembled in reverse order.
 
-This method first visits the node, then recursively visits the left and right subtrees. It is commonly used for operations like tree cloning or copying the structure of the tree.
-4. Find Method
-The find method searches for a node with a specific value in the tree. If the value is found, it returns the node containing that value. If the value is not found, it returns None. This method efficiently traverses the tree based on the BST properties.
+- **Base Case**: If the list is empty, the function returns an empty list.
+- **Recursive Case**: The function takes the first element, calls itself recursively for the rest of the list, and then appends the first element to the result.
+
+### Recursive Sum of Numbers
+
+This function calculates the sum of a list of numbers recursively. It adds the first element of the list to the sum of the remaining elements.
+
+- **Base Case**: If the list is empty, the sum is 0.
+- **Recursive Case**: The function adds the first element to the sum of the remaining elements in the list.
+
+## How to Run the Code
+
+To run the code in this repository:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/DSA-With-Python.git
