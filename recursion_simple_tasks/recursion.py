@@ -11,11 +11,15 @@ print()
 #-----------------------------------------------------------------------------------------------------------------------
 
 #recursive fibonaci number
+memo = {}
 def fibonaci(n : int):
+    if n in memo:
+        return memo[n]
     if n <=1:
         return n
-    return fibonaci(n -1) + fibonaci(n - 2)
-
+    result = fibonaci(n -1) + fibonaci(n - 2)
+    memo[n]=result
+    return result
 num = int(input("Enter a Fibonacci num: "))
 print(f"Fibonacci from {num} is {fibonaci(num)}")
 print()
